@@ -34,7 +34,7 @@ Nesta parte podemos observar a relação entre as variáveis e como elas se comp
 É muito interessante quando plotamos o resultado da correlação em um mapa de calor
 
 `sns.heatmap(df.corr(), annot=True,linewidths=.5)`
-_Por meio deste gráfico observamos que não há correlações plausíveis para que possamos inferir nenhum tipo de análise. Somente que os dados levam à resultados de anêmicos e de não anêmicos. Portanto entramos em um caso de classificação e não de regressão linear. Mesmo a correlação mais fraca está apontando que o resultado sofre algum tipo de influência por causa do gênero da pessoa. Porem basear os resultados com base nessa informação, é muito ruim_
+_Por meio deste gráfico observamos que não há correlações plausíveis para que possamos inferir nenhum tipo de análise mais robusctas. Porem o que podemos observar é que os valores de Hemoglobina podem levar ou não a pessoa a ter anemia (`correlação -.8`). Portanto entramos em um caso de classificação e não de regressão linear. Mesmo a correlação mais fraca está apontando que o resultado sofre algum tipo de influência por causa do gênero da pessoa. Porem basear os resultados com base nessa informação, é muito ruim_
 
 ![image](https://user-images.githubusercontent.com/81988636/207465951-6e3e1796-e1ff-4470-a197-78da65f1f854.png)
 
