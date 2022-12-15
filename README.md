@@ -96,3 +96,31 @@ sns.lmplot(
 
 `X = df.iloc[:, 0:5].values` <br />
 `y = df.iloc[:, 5].values`
+
+As bibliotecas para realizar os testes foram:
+```
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
+```
+Dividimos o dataset em teste e treino utilizando 20% dos dados
+`X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)`
+
+* Resultados
+
+`naive.score(X_test, y_test)` = 0.9298245614035088 <br />
+`logistic.score(X, y)` = 0.9929627023223082 <br />
+`floresta.score(X, y)` = 1.0 <br />
+
+A regressão logistica foi a que obteve os melhores resultados
+
+```
+sns.heatmap(confusion_matrix(predictions_logistica, y_test), 
+            annot= True, cmap="mako");
+```
+
+O heatmap foi:
+
+![image](https://user-images.githubusercontent.com/81988636/207743534-b5096329-c53c-4e7e-a03d-bf57b12c0109.png)
